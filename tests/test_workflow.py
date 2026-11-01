@@ -1,6 +1,5 @@
 import importlib.util
 import json
-import os
 import subprocess
 import sys
 import tempfile
@@ -42,7 +41,7 @@ def make_model(root, name, expression, size):
 class Workflow(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.addCleanup(self.temp.cleanup)
 
     def test_parts_and_fit_revision(self):
@@ -72,7 +71,7 @@ class Workflow(unittest.TestCase):
         mov = self.root / "rotated.mov"
         cli = ["ffmpeg", "-loglevel", "error", "-nostdin"]
         subprocess.run(cli + ["-f","lavfi","-i","testsrc2=s=160x96:r=12:d=3","-c:v","libx264",str(raw)], check=True)
-        subprocess.run(cli + ["-i",str(raw),"-c","copy","-metadata:s:v:0","rotate=90",str(mov)], check=True)
+        subprocess.run(cli + ["-display_rotation","90","-i",str(raw),"-c","copy",str(mov)], check=True)
         photo = self.root / "caliper.heic"
         Image.new("RGB",(200,100),"gray").save(photo, format="HEIF")
         dest = self.root / "evidence"

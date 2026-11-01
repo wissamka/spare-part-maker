@@ -3,3 +3,6 @@ name = "photo-to-spare-part"
 version = "1.0.0"
 requires-python = ">=3.12,<3.13"
 dependencies = ["cadquery>=2.6,<3", "trimesh>=4,<6", "Pillow>=11", "pillow-heif>=1", "numpy>=2"]
+
+[dependency-groups]
+dev = ["networkx>=3,<4"]
