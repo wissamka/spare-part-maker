@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+skill=$(cd "$(dirname "$0")/.." && pwd)
+venv="${XDG_DATA_HOME:-$HOME/.local/share}/spare-part-maker/v1"
+if [[ ! -x "$venv/bin/python" ]] || ! cmp -s "$skill/uv.lock" "$venv/spare-part-maker.lock"; then
+  echo "Run $skill/scripts/setup to install this version's runtime." >&2; exit 2
+fi
+case "${1:-}" in
+  capture) script=capture.py ;;
+  export) script=export_part.py ;;
+  *) echo "Usage: scripts/run {capture|export} --help" >&2; exit 2 ;;
+esac
+shift
+exec "$venv/bin/python" "$skill/scripts/$script" "$@"

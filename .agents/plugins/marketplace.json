@@ -1,0 +1,1 @@
+{"name":"spare-part-tools","interface":{"displayName":"Spare Part Tools"},"plugins":[{"name":"spare-part-maker","source":{"source":"local","path":"./plugins/spare-part-maker"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}

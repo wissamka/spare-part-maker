@@ -1,0 +1,14 @@
+name: Plugin checks
+on: [push, pull_request]
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -q && sudo apt-get install -y ffmpeg libgl1 libglu1-mesa libxrender1
+      - run: python -m pip install uv==0.8.24
+      - run: plugins/spare-part-maker/skills/photo-to-spare-part/scripts/setup
+      - run: ~/.local/share/spare-part-maker/v1/bin/python -m unittest discover -s tests -v

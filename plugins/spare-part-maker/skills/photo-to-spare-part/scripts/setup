@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+skill=$(cd "$(dirname "$0")/.." && pwd)
+base="${XDG_DATA_HOME:-$HOME/.local/share}/spare-part-maker"
+for tool in ffmpeg ffprobe; do command -v "$tool" >/dev/null || { echo "Install $tool and rerun setup." >&2; exit 1; }; done
+mkdir -p "$base"
+if command -v uv >/dev/null; then
+  uv_bin=$(command -v uv)
+else
+  python3 -m venv "$base/bootstrap"
+  "$base/bootstrap/bin/python" -m pip install --disable-pip-version-check 'uv==0.8.24'
+  uv_bin="$base/bootstrap/bin/uv"
+fi
+UV_PROJECT_ENVIRONMENT="$base/v1" "$uv_bin" sync --locked --project "$skill" --python 3.12
+cp "$skill/uv.lock" "$base/v1/spare-part-maker.lock"
