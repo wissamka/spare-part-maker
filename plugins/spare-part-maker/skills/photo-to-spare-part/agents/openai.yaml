@@ -1,4 +1,0 @@
-interface:
-  display_name: "Photo to Spare Part"
-  short_description: "Rebuild a measured household part as an STL"
-  default_prompt: "Use $photo-to-spare-part to rebuild this measured part as an STL."

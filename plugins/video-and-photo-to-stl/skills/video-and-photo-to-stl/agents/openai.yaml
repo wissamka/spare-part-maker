@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video and Photo to STL"
+  short_description: "Rebuild a measured household part as an STL"
+  default_prompt: "Use $video-and-photo-to-stl to rebuild this measured part as an STL."

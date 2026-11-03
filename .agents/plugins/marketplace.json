@@ -1,1 +1,1 @@
-{"name":"spare-part-tools","interface":{"displayName":"Spare Part Tools"},"plugins":[{"name":"spare-part-maker","source":{"source":"local","path":"./plugins/spare-part-maker"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}
+{"name":"spare-part-tools","interface":{"displayName":"Spare Part Tools"},"plugins":[{"name":"video-and-photo-to-stl","source":{"source":"local","path":"./plugins/video-and-photo-to-stl"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}

@@ -11,7 +11,7 @@ import trimesh
 from PIL import Image
 from pillow_heif import register_heif_opener
 
-SKILL = Path(__file__).resolve().parents[1] / "plugins/spare-part-maker/skills/photo-to-spare-part"
+SKILL = Path(__file__).resolve().parents[1] / "plugins/video-and-photo-to-stl/skills/video-and-photo-to-stl"
 SCRIPTS = SKILL / "scripts"
 spec = importlib.util.spec_from_file_location("export_part", SCRIPTS / "export_part.py")
 export_part = importlib.util.module_from_spec(spec)

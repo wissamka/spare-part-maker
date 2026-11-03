@@ -1,4 +1,0 @@
-{
-  "name":"spare-part-maker","version":"1.0.0","description":"Rebuild a household spare part from phone footage and caliper photos as a printable STL.","skills":"./skills/",
-  "interface":{"displayName":"Spare Part Maker","shortDescription":"Turn measured household parts into STL files","developerName":"Wissam Kazan","category":"Productivity","capabilities":["Read","Write"],"defaultPrompt":["Make a replacement part from this video and these caliper photos."]}
-}

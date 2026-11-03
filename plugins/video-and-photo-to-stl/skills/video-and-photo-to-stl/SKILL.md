@@ -1,9 +1,9 @@
 ---
-name: photo-to-spare-part
+name: video-and-photo-to-stl
 description: Reconstruct a rigid household spare part from phone footage, photos and visible caliper readings, produce a validated STL in millimeters, and revise it from fit feedback.
 ---
 
-# Photo to spare part
+# Video and Photo to STL
 
 Work in a separate job directory for each object, outside the plugin installation. Keep originals, evidence, and numbered revisions together. All script paths below are relative to this SKILL.md. Use the executable scripts/run to select the installed Python environment.
 
