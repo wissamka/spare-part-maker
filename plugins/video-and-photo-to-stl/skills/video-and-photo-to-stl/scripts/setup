@@ -2,7 +2,6 @@
 set -euo pipefail
 skill=$(cd "$(dirname "$0")/.." && pwd)
 base="${XDG_DATA_HOME:-$HOME/.local/share}/spare-part-maker"
-for tool in ffmpeg ffprobe; do command -v "$tool" >/dev/null || { echo "Install $tool and rerun setup." >&2; exit 1; }; done
 mkdir -p "$base"
 if command -v uv >/dev/null; then
   uv_bin=$(command -v uv)

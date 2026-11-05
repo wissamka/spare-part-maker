@@ -1,4 +1,21 @@
 {
-  "name":"video-and-photo-to-stl","version":"1.1.0","description":"Rebuild a household spare part from phone footage and caliper photos as a printable STL.","skills":"./skills/",
-  "interface":{"displayName":"Video and Photo to STL","shortDescription":"Turn measured household parts into STL files","developerName":"Wissam Kazan","category":"Productivity","capabilities":["Read","Write"],"defaultPrompt":["Make a replacement part from this video and these caliper photos."]}
+  "name": "video-and-photo-to-stl",
+  "version": "1.2.0",
+  "description": "Turn photos or phone video into a printable spare-part STL. Use graph paper or physical measurements for scale.",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Video and Photo to STL",
+    "shortDescription": "Turn measured household parts into STL files",
+    "developerName": "Wissam Kazan",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Which photos do you need to recreate this spare part?",
+      "Build an STL from these photos on millimeter graph paper.",
+      "Make a replacement part from this video and these caliper photos."
+    ]
+  }
 }

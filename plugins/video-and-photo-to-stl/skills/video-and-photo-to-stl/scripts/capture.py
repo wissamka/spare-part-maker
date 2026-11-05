@@ -22,6 +22,8 @@ def signature(path):
 
 
 def video_candidates(path, scratch, args):
+    if not shutil.which("ffmpeg"):
+        raise ValueError("Video capture requires FFmpeg. Install it or provide still photos.")
     limits = []
     if args.start:
         limits.append(f"gte(t,{args.start})")

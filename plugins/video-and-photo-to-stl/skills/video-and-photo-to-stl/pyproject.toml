@@ -1,6 +1,6 @@
 [project]
 name = "video-and-photo-to-stl"
-version = "1.1.0"
+version = "1.2.0"
 requires-python = ">=3.12,<3.13"
 dependencies = ["cadquery>=2.6,<3", "trimesh>=4,<6", "Pillow>=11", "pillow-heif>=1", "numpy>=2"]
 

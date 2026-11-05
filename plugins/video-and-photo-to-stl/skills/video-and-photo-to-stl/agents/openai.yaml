@@ -1,4 +1,4 @@
 interface:
   display_name: "Video and Photo to STL"
-  short_description: "Rebuild a measured household part as an STL"
-  default_prompt: "Use $video-and-photo-to-stl to rebuild this measured part as an STL."
+  short_description: "Build a spare-part STL from photos, grid paper or video"
+  default_prompt: "Use $video-and-photo-to-stl to tell me which photos to take and build a spare-part STL."

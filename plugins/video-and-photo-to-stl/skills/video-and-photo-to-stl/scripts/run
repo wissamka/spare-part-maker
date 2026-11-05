@@ -7,8 +7,9 @@ if [[ ! -x "$venv/bin/python" ]] || ! cmp -s "$skill/uv.lock" "$venv/spare-part-
 fi
 case "${1:-}" in
   capture) script=capture.py ;;
+  grid) script=grid.py ;;
   export) script=export_part.py ;;
-  *) echo "Usage: scripts/run {capture|export} --help" >&2; exit 2 ;;
+  *) echo "Usage: scripts/run {capture|grid|export} --help" >&2; exit 2 ;;
 esac
 shift
 exec "$venv/bin/python" "$skill/scripts/$script" "$@"
